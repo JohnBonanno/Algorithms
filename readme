@@ -1,3 +1,50 @@
-Two numbers are said to be co-prime if their only common factor is 1. For example, 4 and 9 are co-prime as their only common factor is 1. However, the numbers 4 and 10 are not co-prime. (Co-prime numbers are also referred to as relatively prime.)
+Co-Prime:Two numbers are said to be co-prime if their only common factor is 1. For example, 4 and 9 are co-prime as their only common factor is 1. However, the numbers 4 and 10 are not co-prime. (Co-prime numbers are also referred to as relatively prime.)
 
 This assignment will involve writing a Python script that is passed two values M and N, and it will determine all the co-prime pairs between (1,1) and (M,N). It will present these co-primes by outputting them as a grid.
+
+Closest pair: The closest pair problem is a simple geometric problem whereby you have n points in a plane and you must find the closest pair of points. For example, if your points are
+
+[-13, 5, 18, 7, -14, 21]
+the closest pair are (-13, -14) with a distance of 1 separating them.
+
+Your program only needs to return any one pair of closest numbers if there are more than one pairs having the same closest distance.
+
+The simplest algorithm is a brute force whereby you compare each point to all others, and keep track of the closest pair of points.
+
+The Python program Closest.py sketches a simple start to the problem. However it is missing the implementation of the closest_pair() function.
+
+Notice the stubbed version of closest_pair() returns the tuple (-100, 100) . This is one interesting feature of Python - the ability for functions to return multiple values.
+
+Steps
+
+Write a unit test to test the closest_pair() function. (This is known as test-driven development whereby you write your unit test before implementing the function/method you are testing.) Name your Python program containing your unit test as testClosest.py (Look at testFib.py as an example for writing a new unit test.) Do not name it as TestClosest.py
+The actual lines of test code will look something like
+
+expected = (-13, -14)
+actual = Closest.closest_pair([-13, 5, 18, 7, -14, 21])
+followed by an assertion that expected equals actual.
+
+The [-13, 5, 18, 7, -14, 21] in the call to closest_pair() creates a list with the values -13, 5, 18, 7, -14, 21.
+
+The existing implementation of closest_pair() should fail this unit test.
+
+Implement the closest_pair() function
+Implement closest_pair() so that your implementation passes your unit test.
+
+Choose the brute force algorithm that compares each number with every other number.
+
+I strongly suggest you and your partner think about the algorithm for solving this problem before implementing it in python.
+
+This may require using the debugger.
+
+Run
+
+Before running any python code, you need to cd the directory to the directory containing your python files. You can use python3 Closest.py [number_of_points] to run your code and use python3 -m unittest testClosest.py to test your code, where number_of_points is the length of a list with random numbers.
+
+Same Values in List
+
+Once you get your implementation working for the above unit test with the list containing [-13, 5, 18, 7, -14, 21], next make sure it works if the list contains the same values. For example:
+
+expected = (-13, -13)
+actual = Closest.closest_pair([-13, 5, 18, 7, -14, 21, -13])
+followed by an assertion that expected equals actual.
