@@ -1,0 +1,3 @@
+Two numbers are said to be co-prime if their only common factor is 1. For example, 4 and 9 are co-prime as their only common factor is 1. However, the numbers 4 and 10 are not co-prime. (Co-prime numbers are also referred to as relatively prime.)
+
+This assignment will involve writing a Python script that is passed two values M and N, and it will determine all the co-prime pairs between (1,1) and (M,N). It will present these co-primes by outputting them as a grid.
